@@ -1,0 +1,143 @@
+body {
+    font-family: sans-serif;
+    background-image: url('static/light_background.jpg'); /* Replace with your light background image */
+    background-size: cover; 
+    background-position: center center; 
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0; 
+}
+
+.logo-left, .logo-right {
+    padding: 10px;
+    text-align: center; 
+}
+
+.logo {
+    max-height: 50px; 
+}
+
+hr {
+    border-top: 10px solid #692727;
+    margin: 1px 0;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px; 
+}
+
+#left-panel {
+    width: 20%;
+    margin-right: 20px;
+    flex-basis: 20%; 
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+#center-panel {
+    width: 40%;
+    text-align: center;
+    flex-basis: 40%; 
+}
+
+#center-panel img.center-image { 
+    max-width: 100%; 
+    height: auto; 
+    padding-left: 10px;
+}
+
+#status-indicators {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 3px;
+    color: white; 
+}
+
+.good {
+    background-color: green;
+}
+
+#right-panel {
+    width: 30%;
+    flex-basis: 30%; 
+}
+
+#datalog {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+#notification {
+    text-align: center; 
+    font-size: 24px; 
+}
+
+#alarm-icon {
+    color: brown; /* Initial color */
+    animation: blink 1s infinite; 
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.2; }
+    100% { opacity: 1; }
+}
+
+.green-blink {
+    color: green;
+}
+
+.red-blink {
+    color: red;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 768px) {
+    #container {
+        flex-direction: column; 
+    }
+
+    #left-panel,
+    #center-panel,
+    #right-panel {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+}
